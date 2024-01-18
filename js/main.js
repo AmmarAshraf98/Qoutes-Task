@@ -39,11 +39,6 @@ var qoutes = [
   {
     qoute:
       "“As he read, I fell in love the way you fall asleep: slowly, and then all at once.”",
-    writer: "Mahmoud Unhappy",
-  },
-  {
-    qoute:
-      "“As he read, I fell in love the way you fall asleep: slowly, and then all at once.”",
     writer: "John Green",
   },
 ];
@@ -51,14 +46,17 @@ var qoutes = [
 var repeated = [];
 
 function randomQoutes() {
-  var random = Math.floor(Math.random() * qoutes.length); //5
+  var random = Math.floor(Math.random() * qoutes.length);
 
+  // display qoutes at first generate and push in repeated arr
   if (repeated.length === 0) {
     document.getElementById("qout").innerHTML = qoutes[random].qoute;
     document.getElementById("writer").innerHTML = qoutes[random].writer;
     repeated.push(random);
-    console.log(repeated);
-  } else {
+  }
+
+  // check if qoutes repeated or not
+  else {
     if (repeated.includes(random) == true) {
       randomQoutes();
     } else {
@@ -69,7 +67,10 @@ function randomQoutes() {
     }
   }
 
+  // empty the repeated array after being fully
   if (repeated.length == qoutes.length) {
     repeated = [];
   }
 }
+
+randomQoutes();

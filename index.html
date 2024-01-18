@@ -5,21 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roundom Qoute</title>
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="text-center my-5">Roundom Qoute</h1>
-        <div class="qoute text-center my-5 mx-auto" id="qoute">
-            <div class="shadow">
-                <p id="qout" class="fs-3 textQ"></p>
+    <section>
+        <div class="layer position-absolute w-100 h-100"></div>
+        <div class="content p-5 position-relative">
+            <h1 class="text-center position-relative py-2">Generate Qoutes</h1>
+            <div class="qout text-center p-5">
+                <p id="qout" class="textQ"></p>
                 <p id="writer"></p>
             </div>
+            <button class="btn btn-lg text-white mx-auto d-block create-btn mt-5"
+                onclick="randomQoutes()">Generate</button>
         </div>
-        <button class="btn btn-lg text-white mx-auto d-block create-btn mt-5" onclick="randomQoutes()">Generate</button>
-    </div>
+    </section>
+
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
